@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NextGen Computers: High-Performance Workstations</title>
+  <style>
+    body {
+      font-family: 'Lucida Console', monospace;
+      font-size: 16px;
+      color: #111;
+      background-color: white;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+    .landing {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh; /* Adjusted height */
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    hr { border: none; height: 2px; background-color: lightgrey; width: 100%; margin: 40px auto; }
+    table { border-collapse: collapse; text-align: left; width: 100%; margin: 20px 0; }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #dddddd;
+      vertical-align: top;
+    }
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+    .links-container { font-size: 24px; margin: 20px; }
+    .links-container a { text-decoration: none; margin: 0 10px; color: #007bff; }
+    .links-container a:hover { text-decoration: underline; }
+    .separator { letter-spacing: -9px; color: lightgrey; }
+    .note { font-size: 0.9em; color: #555; margin-top: 5px; }
+    .cost-driver { font-style: italic; color: #333; }
+    .highlight { color: #d9534f; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="landing">
+    <h1>NextGen Computers</h1>
+    <p>High-Performance Workstations for Demanding Professionals</p>
+    <div class="links-container">
+      <a href="#components">Components</a><span class="separator">|</span>
+      <a href="#builds">Example Builds</a><span class="separator">|</span>
+      <a href="#analysis">Analysis</a><span class="separator">|</span>
+      <a href="#recommendations">Recommendations</a>
+    </div>
+  </div>
+
+  <hr>
+  <h2 id="components">Component Menu</h2>
+  <p>We source high-quality components to build workstations tailored to your needs. All prices in USD.</p>
+  <table>
+    <thead>
+      <tr><th>Option</th><th>Key Spec</th><th>USD-equiv Price</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>CPU</b></td><td>Intel Xeon Platinum 8558 (48C/96T, 260MB L3)</td><td>$3,772.99</td></tr>
+      <tr><td></td><td>Intel Xeon Platinum 8468H (48C/96T, 105MB L3)</td><td class="highlight">$52,247.00</td></tr>
+      <tr><td><b>GPU</b></td><td>NVIDIA RTX 6000 Ada (48 GB GDDR6)</td><td>~$10,000</td></tr>
+      <tr><td></td><td>PNY RTX A6000 Ada (48 GB GDDR6)</td><td>$8,999.00</td></tr>
+      <tr><td><b>RAM</b></td><td>Corsair WS (256 GB DDR5-5600 ECC, 8x32GB)</td><td>$1,880.00</td></tr>
+      <tr><td></td><td>Kingston FURY (256 GB DDR5-5600 ECC, 8x32GB)</td><td>$1,179.00</td></tr>
+      <tr><td><b>Storage</b></td><td>WD Red Pro or Seagate IronWolf Pro (20 TB 7200 RPM HDD)</td><td>$450.00</td></tr>
+      <tr><td><b>Motherboard</b></td><td>ASUS Pro WS W790 SAGE SE (Single-socket)</td><td>$880.00</td></tr>
+      <tr><td></td><td>Supermicro X13DAI-T-O (Dual-socket)</td><td>$1,137.00</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Currency baseline as of 26 Jun 2025. Prices are estimates and subject to market changes.</p>
+
+  <hr>
+  <h2 id="builds">What a Complete Workstation Costs</h2>
+  <p>Three sample configurations to illustrate price points and component balance.</p>
+  <table>
+    <thead>
+      <tr><th>Build Profile</th><th>Parts Selected</th><th>Total USD</th><th>Cost Drivers</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Value-oriented</b></td>
+        <td>8558, RTX A6000, Kingston RAM, WD Red, ASUS mbd</td>
+        <td>$15,281</td>
+        <td class="cost-driver">GPU is 59% of budget; CPU only 25%</td>
+      </tr>
+      <tr>
+        <td><b>GPU-centric Balanced</b></td>
+        <td>8558, RTX 6000, Corsair RAM, WD Red, Supermicro mbd</td>
+        <td>$17,240</td>
+        <td class="cost-driver">GPU still dominant; RAM upgraded</td>
+      </tr>
+      <tr>
+        <td><b>Flagship / No-compromise</b></td>
+        <td>8468H, RTX 6000, Corsair RAM, WD Red, Supermicro mbd</td>
+        <td class="highlight">$65,714</td>
+        <td class="cost-driver">CPU alone ≈ 80% of the bill</td>
+      </tr>
+    </tbody>
+  </table>
+    <p class="note">Swapping storage or RAM brands and totals move by only ≈ $0–$700.</p>
+
+  <hr>
+  <h2 id="analysis">High-Level Comparative Takeaways</h2>
+  <h4>CPU economics dominate or disappear</h4>
+  <p>With Xeon 8468H the CPU is ~80% of the spend; with the 8558 it falls below 25%. Intel’s own list prices are ~$13.9k for 8468H and ~$4.65k for 8558; the Dell-SG quote is an extreme regional markup.</p>
+  <h4>GPU spend is steady</h4>
+  <p>Both Ada-generation cards carry identical 48 GB VRAM. The PNY-branded board shaves ≈ $1k without hurting compute performance; the NVIDIA-branded card may add better blower acoustics and 3-year direct support.</p>
+  <h4>Memory & storage are rounding errors at this tier</h4>
+  <p>Jumping between the two 256 GB ECC kits changes the grand total by &lt; 5%. If you need &gt;256 GB, budget rises linearly (~$750 per extra 128 GB).</p>
+  <h4>Motherboard choice is about compatibility, not cost</h4>
+  <p>The ASUS W790 board is aimed at single-socket Xeon W; verify VRM support before ordering. The Supermicro X13DAI-T-O is validated for 4th & 5th-gen Xeon Scalable and is the pragmatic pick.</p>
+  <h4>Performance Nuance</h4>
+  <p>Both CPUs share the same core/thread counts, but the 8558 doubles L3 cache (260MB vs 105MB) and has faster UPI (20 GT/s vs 16 GT/s). In memory-bound HPC workloads the 8558 may outperform despite the lower vendor price.</p>
+
+  <hr>
+  <h2 id="recommendations">Strategy Recommendations</h2>
+  <table>
+    <thead>
+      <tr><th>Scenario</th><th>Suggested Config</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>GPU-heavy AI/Ray-tracing</b></td>
+        <td>8558 · RTX 6000 · 256 GB RAM · Supermicro board – leaves budget for a second RTX 6000 later.</td>
+      </tr>
+      <tr>
+        <td><b>Balanced Scientific/CAE</b></td>
+        <td>8558 · RTX A6000 · 512 GB RAM (upgrade) – CPU cache + larger memory pool matter more than branding on the GPU.</td>
+      </tr>
+      <tr>
+        <td><b>Memory-latency-critical DB</b></td>
+        <td>8468H only if corporate procurement absorbs the premium and you require specific Sapphire-Rapids features. Otherwise stick with 8558.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><b>In short:</b> The 48-core 5th-gen Xeon 8558 paired with a single RTX 6000 Ada delivers &gt;90% of the flagship’s real-world performance at roughly ¼ of the price.</p>
+
+</body>
+</html>
